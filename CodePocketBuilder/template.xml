@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="5"
+    name="Builder"
+    minApi="9"
+    minBuildApi="14"
+    description="Creates a CodePocket template classes">
+
+    <category value="CodePocket DI-MVCP" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="prefixName"
+        name="Prefix"
+        type="string"
+        constraints="nonempty"
+        default="Main"
+        help="The name of the activity class to create"
+    />
+    <parameter id="baseType" name="Base" type="enum" default="DIBaseActivity" help="Choose base class">
+        <option id="DIBaseActivity">DIBaseActivity</option>
+        <option id="DIBaseFragment">DIBaseFragment</option>
+        <option id="DIBaseSwipeBackActivity">DIBaseSwipeBackActivity</option>
+        <option id="DIBaseSwipeBackFragment">DIBaseSwipeBackFragment</option>
+        <option id="DIBaseSwipeBackPagerFragment">DIBaseSwipeBackPagerFragment</option>
+        <option id="DIBasePagerFragment">DIBasePagerFragment</option>
+    </parameter>
+    <parameter id="scope" name="Scope" type="enum" default="ActivityScope" help="Choose scope">
+        <option id="ApplicationScope">ApplicationScope</option>
+        <option id="ActivityScope">ActivityScope</option>
+        <option id="FragmentScope">FragmentScope</option>
+      </parameter>
+
+    <parameter
+        id="contractClass"
+        name="Contract Name"
+        type="string"
+        constraints="class|nonempty"
+        visibility="false"
+        suggest="${extractLetters(prefixName)}Contract"
+        default="MainContract"
+        help="The name of the contract interface to create" />
+    <parameter
+        id="controllerClass"
+        name="Controller Name"
+        type="string"
+        constraints="class|nonempty"
+        suggest="${extractLetters(prefixName)}Controller"
+        visibility="false"
+        default="MainController"
+        help="The name of the controller class to create" />
+    <parameter
+        id="viewClass"
+        visibility="false"
+        name="View Name"
+        type="string"
+        constraints="class|nonempty"
+        suggest="${extractLetters(prefixName)}View"
+        default="MainView"
+        help="The name of the view class to create" />
+    <parameter
+        id="presenterClass"
+        name="Presenter Name"
+        type="string"
+        constraints="class|nonempty"
+        suggest="${extractLetters(prefixName)}Impl"
+        visibility="false"
+        default="MainPresenter"
+        help="The name of the view class to create" />
+    <parameter
+        id="moduleClass"
+        name="Module Name"
+        type="string"
+        constraints="class|nonempty"
+        suggest="${extractLetters(prefixName)}Module"
+        visibility="false"
+        default="MainImpl"
+        help="The name of the view class to create" />
+
+    <parameter
+        id="packageFolderName"
+        name="Package Folder Name"
+        constraints="layout|unique|nonempty"
+        type="string"
+        visibility="false"
+        suggest="${extractLetters(prefixName?lower_case)}"
+        default="main"
+        help="The name of package folder to create." />
+
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="activity_${extractLetters(prefixName?lower_case)}"
+        default="activity_main"
+        help="The name of the layout to create for the activity" />
+
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_blank_activity.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
