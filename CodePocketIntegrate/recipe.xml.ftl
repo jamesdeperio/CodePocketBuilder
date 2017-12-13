@@ -4,8 +4,6 @@
 <#if generateKotlin>
  <instantiate from="root/src/app_package/app/MainApplication.kt.ftl"
                     to="${escapeXmlAttribute(srcOut)}/business/app/MainApplication.kt" />
-  <instantiate from="root/src/app_package/app/EventBus.kt.ftl"
-                    to="${escapeXmlAttribute(srcOut)}/business/app/EventBus.kt" />
 
   <instantiate from="root/src/app_package/component/AppComponent.kt.ftl"
                     to="${escapeXmlAttribute(srcOut)}/business/component/AppComponent.kt" />
@@ -29,19 +27,25 @@
 
   <instantiate from="root/src/app_package/service/NetworkService.kt.ftl"
                     to="${escapeXmlAttribute(srcOut)}/integration/service/NetworkService.kt" />
+<instantiate from="root/src/app_package/service/EventBus.kt.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/integration/bus/EventBus.kt" />
 
   <instantiate from="root/src/app_package/base/DIBaseActivity.kt.ftl"
-                    to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseActivity.kt" />
+                     to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseActivity.kt" />
+ <instantiate from="root/src/app_package/base/DIBaseDrawerActivity.kt.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseDrawerActivity.kt" />
   <instantiate from="root/src/app_package/base/DIBaseFragment.kt.ftl"
                     to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseFragment.kt" />
+  <instantiate from="root/src/app_package/base/DIBasePagerFragment.kt.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBasePagerFragment.kt" />
   <instantiate from="root/src/app_package/base/DIBaseSwipeBackFragment.kt.ftl"
-                    to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseSwipeBackFragment.kt" />
+                     to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseSwipeBackFragment.kt" />
+ <instantiate from="root/src/app_package/base/DIBaseSwipeBackPagerFragment.kt.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseSwipeBackPagerFragment.kt" />
 
 <#else>
  <instantiate from="root/src/app_package/app/MainApplication.java.ftl"
                     to="${escapeXmlAttribute(srcOut)}/business/app/MainApplication.java" />
-  <instantiate from="root/src/app_package/app/EventBus.java.ftl"
-                    to="${escapeXmlAttribute(srcOut)}/business/app/EventBus.java" />
 
   <instantiate from="root/src/app_package/component/AppComponent.java.ftl"
                     to="${escapeXmlAttribute(srcOut)}/business/component/AppComponent.java" />
@@ -65,13 +69,22 @@
 
   <instantiate from="root/src/app_package/service/NetworkService.java.ftl"
                     to="${escapeXmlAttribute(srcOut)}/integration/service/NetworkService.java" />
+  <instantiate from="root/src/app_package/service/EventBus.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/integration/bus/EventBus.java" />
 
   <instantiate from="root/src/app_package/base/DIBaseActivity.java.ftl"
-                    to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseActivity.java" />
-  <instantiate from="root/src/app_package/base/DIBaseFragment.java.ftl"
-                    to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseFragment.java" />
-  <instantiate from="root/src/app_package/base/DIBaseSwipeBackFragment.java.ftl"
-                    to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseSwipeBackFragment.java" />
+                       to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseActivity.java" />
+   <instantiate from="root/src/app_package/base/DIBaseDrawerActivity.java.ftl"
+                      to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseDrawerActivity.java" />
+    <instantiate from="root/src/app_package/base/DIBaseFragment.java.ftl"
+                      to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseFragment.java" />
+    <instantiate from="root/src/app_package/base/DIBasePagerFragment.java.ftl"
+                      to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBasePagerFragment.java" />
+    <instantiate from="root/src/app_package/base/DIBaseSwipeBackFragment.java.ftl"
+                       to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseSwipeBackFragment.java" />
+   <instantiate from="root/src/app_package/base/DIBaseSwipeBackPagerFragment.java.ftl"
+                      to="${escapeXmlAttribute(srcOut)}/presentation/base/DIBaseSwipeBackPagerFragment.java" />
+
 </#if>
 
 </recipe>

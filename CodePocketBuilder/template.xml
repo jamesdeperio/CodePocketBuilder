@@ -20,6 +20,7 @@
     />
     <parameter id="baseType" name="Base" type="enum" default="DIBaseActivity" help="Choose base class">
         <option id="DIBaseActivity">DIBaseActivity</option>
+        <option id="DIBaseDrawerActivity">DIBaseDrawerActivity</option>
         <option id="DIBaseFragment">DIBaseFragment</option>
         <option id="DIBaseSwipeBackActivity">DIBaseSwipeBackActivity</option>
         <option id="DIBaseSwipeBackFragment">DIBaseSwipeBackFragment</option>
@@ -27,7 +28,6 @@
         <option id="DIBasePagerFragment">DIBasePagerFragment</option>
     </parameter>
     <parameter id="scope" name="Scope" type="enum" default="ActivityScope" help="Choose scope">
-        <option id="ApplicationScope">ApplicationScope</option>
         <option id="ActivityScope">ActivityScope</option>
         <option id="FragmentScope">FragmentScope</option>
       </parameter>
@@ -38,8 +38,8 @@
         type="string"
         constraints="class|nonempty"
         visibility="false"
-        suggest="${extractLetters(prefixName)}Contract"
-        default="MainContract"
+        suggest="Has${extractLetters(prefixName)}Contract"
+        default="HasMainContract"
         help="The name of the contract interface to create" />
     <parameter
         id="controllerClass"
