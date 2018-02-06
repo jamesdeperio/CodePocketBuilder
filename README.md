@@ -47,7 +47,7 @@ android {
     compileSdkVersion 27
     buildToolsVersion '27.0.3'
     defaultConfig {
-        applicationId "ph.nyxsys.vcastplay"
+        applicationId ""
         minSdkVersion 18
         targetSdkVersion 27
         versionCode 1
