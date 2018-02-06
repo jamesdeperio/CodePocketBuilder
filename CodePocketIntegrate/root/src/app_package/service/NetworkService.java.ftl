@@ -10,22 +10,27 @@ import retrofit2.Converter;
  */
 public class NetworkService extends RetrofitService {
     public NetworkService(Context context) {
-
+        super(context);
     }
     @NotNull
     @Override
     public Converter.Factory initConverterFactory() {
         return null;
     }
+    @NotNull
+    @Override
+    public Converter.Factory initRxAdapterFactory() {
+        return null;
+    }
 
     @Override
-    public int setCacheSize() {
+    public int initCacheSize() {
         return 0;
     }
 
     @NotNull
     @Override
-    public String setBaseURL() {
+    public String initBaseURL() {
         return null;
     }
 }

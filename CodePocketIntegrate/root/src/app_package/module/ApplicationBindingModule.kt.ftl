@@ -6,7 +6,7 @@ import android.content.Context
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
-import ${packageName}.business.app.EventBus
+import ${packageName}.integration.bus.EventBus
 import ${packageName}.business.scope.ApplicationScope
 import ${packageName}.integration.service.NetworkService
 /**

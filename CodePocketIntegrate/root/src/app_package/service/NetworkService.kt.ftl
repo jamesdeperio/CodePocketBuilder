@@ -9,8 +9,10 @@ import retrofit2.Converter
  */
 class NetworkService(
         private val context: Context
-) : RetrofitService() {
+) : RetrofitService(context) {
     override fun initConverterFactory(): Converter.Factory = null //todo Moshi , Gson, jackson
-    override fun setCacheSize(): Int = 1
-    override fun setBaseURL(): String = ""
+    override fun initRxAdapterFactory(): CallAdapter.Factory =null
+    override fun initCacheSize(): Int = 1
+    override fun initBaseURL(): String = ""
+
 }
