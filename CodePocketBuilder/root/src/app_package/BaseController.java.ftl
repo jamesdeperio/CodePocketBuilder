@@ -3,6 +3,7 @@ package ${packageName}.presentation.${packageFolderName};
 import android.os.Bundle;
 import ${packageName}.business.module.${packageFolderName}.${contractClass};
 import javax.inject.Inject;
+import io.reactivex.disposables.CompositeDisposable;
 <#if  baseType== "DIBaseDrawerActivity">
 import android.view.MenuItem;
 </#if>
@@ -12,6 +13,8 @@ import android.view.MenuItem;
  **/
 public class ${controllerClass} extends ${viewClass} implements ${contractClass}.Event {
     @Inject ${contractClass}.Presenter presenter;
+    @Inject ${contractClass}.ViewMethod viewMethod;
+    @Inject CompositeDisposable subscription;
 <#if  baseType== "DIBasePagerFragment">
            @Override
             public void setupPage() {
