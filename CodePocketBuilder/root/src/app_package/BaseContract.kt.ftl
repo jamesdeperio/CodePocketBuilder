@@ -1,9 +1,9 @@
-package ${packageName}.business.module.${packageFolderName}
-
 /**
  * @version codepocket template builder v1.0
  * @author github.com/jamesdeperio
  **/
+package ${packageName}.appmodule.${packageFolderName}
+
 interface ${contractClass} {
     interface Event
 

@@ -20,12 +20,8 @@
     />
     <parameter id="baseType" name="Base" type="enum" default="DIBaseActivity" help="Choose base class">
         <option id="DIBaseActivity">DIBaseActivity</option>
-        <option id="DIBaseDrawerActivity">DIBaseDrawerActivity</option>
         <option id="DIBaseFragment">DIBaseFragment</option>
-        <option id="DIBaseSwipeBackActivity">DIBaseSwipeBackActivity</option>
-        <option id="DIBaseSwipeBackFragment">DIBaseSwipeBackFragment</option>
-        <option id="DIBaseSwipeBackPagerFragment">DIBaseSwipeBackPagerFragment</option>
-        <option id="DIBasePagerFragment">DIBasePagerFragment</option>
+        <option id="DIBaseSwipeBackFragment">DIBaseSwipeFragment</option>
     </parameter>
     <parameter id="scope" name="Scope" type="enum" default="ActivityScope" help="Choose scope">
         <option id="ActivityScope">ActivityScope</option>
