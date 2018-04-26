@@ -3,6 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="${relativePackage}.presentation.${packageFolderName}.${controllerClass}">
+    tools:context="${relativePackage}.appmodule.${packageFolderName}.${controllerClass}">
 
 </LinearLayout>
