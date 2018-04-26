@@ -24,8 +24,8 @@ class MainExceptionHandler: Thread.UncaughtExceptionHandler {
             writer.append(sStackTrace)
             writer.flush()
             writer.close()
-        }catch (e:Exception){
-            e.printStackTrace()
+        }catch (it:Exception){
+            it.printStackTrace()
         }
         System.exit(3)
     }

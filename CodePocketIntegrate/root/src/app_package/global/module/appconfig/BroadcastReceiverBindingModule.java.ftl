@@ -8,12 +8,11 @@ import dagger.Module;
 import dagger.android.support.AndroidSupportInjectionModule;
 
 @Module(includes = AndroidSupportInjectionModule.class)
-public abstract class ActivityBindingModule {
-// todo
-/*
-    @ActivityScope
+public abstract class BroadcastReceiverBindingModule {
+//todo
+  /*
+    @BroadcastReceiverScope
     @ContributesAndroidInjector(modules = SampleModule.class)
-    abstract SampleController sampleInjector();
+     abstract SampleController sampleInjector();
 */
-
 }

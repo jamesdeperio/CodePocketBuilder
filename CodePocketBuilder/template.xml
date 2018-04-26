@@ -21,7 +21,7 @@
     <parameter id="baseType" name="Base" type="enum" default="DIBaseActivity" help="Choose base class">
         <option id="DIBaseActivity">DIBaseActivity</option>
         <option id="DIBaseFragment">DIBaseFragment</option>
-        <option id="DIBaseSwipeBackFragment">DIBaseSwipeFragment</option>
+        <option id="DIBaseSwipeFragment">DIBaseSwipeFragment</option>
     </parameter>
     <parameter id="scope" name="Scope" type="enum" default="ActivityScope" help="Choose scope">
         <option id="ActivityScope">ActivityScope</option>

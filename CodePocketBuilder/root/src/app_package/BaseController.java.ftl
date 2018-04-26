@@ -1,36 +1,18 @@
-package ${packageName}.presentation.${packageFolderName};
-
-import android.os.Bundle;
-import ${packageName}.business.module.${packageFolderName}.${contractClass};
-import javax.inject.Inject;
-import io.reactivex.disposables.CompositeDisposable;
-<#if  baseType== "DIBaseDrawerActivity">
-import android.view.MenuItem;
-</#if>
 /**
  * @version codepocket template builder v1.0
  * @author github.com/jamesdeperio
  **/
-public class ${controllerClass} extends ${viewClass} implements ${contractClass}.Event {
+package ${packageName}.appmodule.${packageFolderName};
+
+import android.os.Bundle;
+import javax.inject.Inject;
+import io.reactivex.disposables.CompositeDisposable;
+import ${packageName}.global.base.${baseType};
+
+public class ${controllerClass} extends ${baseType} implements ${contractClass}.Event {
     @Inject ${contractClass}.Presenter presenter;
     @Inject ${contractClass}.ViewMethod viewMethod;
     @Inject CompositeDisposable subscription;
-<#if  baseType== "DIBasePagerFragment">
-           @Override
-            public void setupPage() {
-                //todo   addPage(pageName,fragment);
-                 }
-<#elseif baseType== "DIBaseSwipeBackPagerFragment">
-            @Override
-            public void setupPage() {
-              //todo   addPage(pageName,fragment);
-              }
-                 <#elseif  baseType== "DIBaseDrawerActivity">
-                  @Override
-                   public boolean onNavigationItemSelected(MenuItem item) {
-                        return true;
-                     }
-  </#if>
 
     @Override
     public void initialization(Bundle savedInstanceState) {

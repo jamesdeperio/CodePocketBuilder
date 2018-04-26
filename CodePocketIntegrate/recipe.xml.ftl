@@ -70,7 +70,50 @@
 <instantiate from="root/src/app_package/integration/bus/EventBus.kt.ftl"
                     to="${escapeXmlAttribute(srcOut)}/integration/bus/EventBus.kt" />
 <#else>
+ <instantiate from="root/src/app_package/global/app/MainApplication.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/app/MainApplication.java" />
+<instantiate from="root/src/app_package/global/app/MainExceptionHandler.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/app/MainExceptionHandler.java" />
+<instantiate from="root/src/app_package/global/app/GlideModule.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/app/GlideAppModule.java" />
+  <instantiate from="root/src/app_package/global/app/AppComponent.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/app/AppComponent.java" />
 
+  <instantiate from="root/src/app_package/global/base/DIBaseActivity.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/base/DIBaseActivity.java" />
+  <instantiate from="root/src/app_package/global/base/DIBaseFragment.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/base/DIBaseFragment.java" />
+  <instantiate from="root/src/app_package/global/base/DIBaseSwipeFragment.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/base/DIBaseSwipeFragment.java" />
+
+  <instantiate from="root/src/app_package/global/module/appconfig/ActivityBindingModule.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/module/appconfig/ActivityBindingModule.java" />
+  <instantiate from="root/src/app_package/global/module/appconfig/FragmentBindingModule.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/module/appconfig/FragmentBindingModule.java" />
+  <instantiate from="root/src/app_package/global/module/appconfig/ApplicationBindingModule.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/module/appconfig/ApplicationBindingModule.java" />
+  <instantiate from="root/src/app_package/global/module/appconfig/ApplicationBindingModule.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/module/appconfig/ApplicationBindingModule.java" />
+  <instantiate from="root/src/app_package/global/module/appconfig/ServiceBindingModule.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/module/appconfig/ServiceBindingModule.java" />
+  <instantiate from="root/src/app_package/global/module/appconfig/BroadcastReceiverBindingModule.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/module/appconfig/BroadcastReceiverBindingModule.java" />
+
+  <instantiate from="root/src/app_package/global/scope/ActivityScope.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/scope/ActivityScope.java" />
+  <instantiate from="root/src/app_package/global/scope/FragmentScope.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/scope/FragmentScope.java" />
+  <instantiate from="root/src/app_package/global/scope/ApplicationScope.java.ftl"
+                      to="${escapeXmlAttribute(srcOut)}/global/scope/ApplicationScope.java" />
+  <instantiate from="root/src/app_package/global/scope/BroadcastReceiverScope.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/scope/BroadcastReceiverScope.java" />
+  <instantiate from="root/src/app_package/global/scope/ServiceScope.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/global/scope/ServiceScope.java" />
+
+  <instantiate from="root/src/app_package/integration/network/NetworkService.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/integration/network/NetworkService.java" />
+<instantiate from="root/src/app_package/integration/bus/EventBus.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/integration/bus/EventBus.java" />
 </#if>
 
 </recipe>
