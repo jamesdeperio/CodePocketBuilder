@@ -47,6 +47,15 @@
         default="MainController"
         help="The name of the controller class to create" />
     <parameter
+        id="viewImplClass"
+        visibility="false"
+        name="View Implementation Name"
+        type="string"
+        constraints="class|nonempty"
+        suggest="${extractLetters(prefixName)}ViewImpl"
+        default="MainViewImpl"
+        help="The name of the view implementation class to create" />
+    <parameter
         id="viewClass"
         visibility="false"
         name="View Name"

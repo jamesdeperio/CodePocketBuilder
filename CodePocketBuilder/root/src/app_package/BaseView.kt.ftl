@@ -4,12 +4,8 @@
  **/
  package ${packageName}.appmodule.${packageFolderName}
 
-import android.content.Context
-import io.reactivex.internal.disposables.DisposableContainer
+import android.view.View
 
  class ${viewClass}(
-        private val context: Context,
-        private val subscription: DisposableContainer
-): ${contractClass}.ViewMethod {
-
-}
+          view: View,
+            event:${contractClass}.Event)

@@ -17,28 +17,35 @@ import butterknife.ButterKnife
              fun provideSubscription() = CompositeDisposable()
 
        <#if scope== "ActivityScope">
+          @SuppressLint("InflateParams")
+           @ActivityScope
+           @Provides
+           @JvmStatic
+           fun provideComponent(controller: ${controllerClass}): ${viewClass} {
+               val view= controller.layoutInflater.inflate(R.layout.${layoutName},null)
+               controller.setContentView(view)
+               return ${viewClass}(view=view,event=controller as  ${contractClass}.Event)
+           }
               @ActivityScope
               @Provides
               @JvmStatic
-              fun provideViewMethod(controller:  ${controllerClass}, disposableContainer: CompositeDisposable) : ${contractClass}.ViewMethod {
-                    val view = ${viewClass}(context = controller, subscription = disposableContainer)
-                    controller.setContentView(R.layout.${layoutName})
-                    controller.binder.add(ButterKnife.bind(view,controller))
-                    controller.binder.add(ButterKnife.bind(controller,controller))
-                    return view
-                }
+              fun provideViewMethod(controller:  ${controllerClass}, view:${viewClass}) : ${contractClass}.ViewMethod
+                    =${viewImplClass}(context = controller,view=view)
 
        <#elseif scope== "FragmentScope">
+           @FragmentScope
+           @Provides
+           @JvmStatic
+           fun provideComponent(controller:  ${controllerClass}) : ${viewClass} {
+           controller.rootView= controller.layoutInflater.inflate(R.layout.${layoutName},controller.container ,false)
+               return ${viewClass}(controller.rootView!!,controller as HasRFIDContract.Event)
+           }
+
   @FragmentScope
     @Provides
     @JvmStatic
-    fun provideViewMethod(controller: ${controllerClass}, disposableContainer: CompositeDisposable) : ${contractClass}.ViewMethod {
-        val view = ${viewClass}(context = controller.context!!, subscription = disposableContainer)
-        controller.rootView= controller.layoutInflater.inflate(R.layout.${layoutName},controller.container ,false)
-        controller.binder.add(ButterKnife.bind(view,controller.rootView!!))
-        controller.binder.add(ButterKnife.bind(controller,controller.rootView!!))
-        return view
-    }
+   fun provideViewMethod(controller:  ${controllerClass}, view:${viewClass}) : ${contractClass}.ViewMethod
+      =${viewImplClass}(context = controller.activity!!,view=view)
     </#if>
 
         @${scope} @Provides @JvmStatic

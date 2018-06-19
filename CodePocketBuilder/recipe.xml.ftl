@@ -9,7 +9,10 @@
                     to="${escapeXmlAttribute(srcOut)}/appmodule/${packageFolderName}/${contractClass}.kt" />
 
      <instantiate from="root/src/app_package/BaseView.kt.ftl"
-                    to="${escapeXmlAttribute(srcOut)}/appmodule/${packageFolderName}/${viewClass}.kt" />
+                       to="${escapeXmlAttribute(srcOut)}/appmodule/${packageFolderName}/${viewClass}.kt" />
+
+  <instantiate from="root/src/app_package/BaseViewImpl.kt.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/appmodule/${packageFolderName}/${viewImplClass}.kt" />
 
      <instantiate from="root/src/app_package/BasePresenter.kt.ftl"
                     to="${escapeXmlAttribute(srcOut)}/appmodule/${packageFolderName}/${presenterClass}.kt" />
