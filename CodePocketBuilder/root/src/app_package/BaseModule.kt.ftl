@@ -38,7 +38,7 @@ import butterknife.ButterKnife
            @JvmStatic
            fun provideComponent(controller:  ${controllerClass}) : ${viewClass} {
            controller.rootView= controller.layoutInflater.inflate(R.layout.${layoutName},controller.container ,false)
-               return ${viewClass}(controller.rootView!!,controller as HasRFIDContract.Event)
+               return ${viewClass}(controller.rootView!!,controller as  ${contractClass}.Event)
            }
 
   @FragmentScope
