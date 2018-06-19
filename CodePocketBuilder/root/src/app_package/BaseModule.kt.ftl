@@ -3,7 +3,7 @@
  * @author github.com/jamesdeperio
  **/
  package ${packageName}.appmodule.${packageFolderName}
-
+import android.annotation.SuppressLint
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
