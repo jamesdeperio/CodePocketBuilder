@@ -10,7 +10,7 @@ import dagger.Provides
 import ${packageName}.global.scope.${scope}
 import io.reactivex.disposables.CompositeDisposable
 import ${packageName}.R
-import butterknife.ButterKnife
+import android.support.v4.app.Fragment
  @Module
   object ${moduleClass} {
          @${scope} @Provides @JvmStatic
@@ -45,7 +45,7 @@ import butterknife.ButterKnife
     @Provides
     @JvmStatic
    fun provideViewMethod(controller:  ${controllerClass}, view:${viewClass}) : ${contractClass}.ViewMethod
-      =${viewImplClass}(context = controller.activity!!,view=view)
+      =${viewImplClass}(fragment = controller as Fragment,view=view)
     </#if>
 
         @${scope} @Provides @JvmStatic
