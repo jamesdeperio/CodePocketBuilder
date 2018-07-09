@@ -11,6 +11,6 @@ import android.support.v4.app.Fragment
         private val context: Context,
         <#elseif scope== "FragmentScope">
         private val fragment: Fragment,
-         <#/if>
+           </#if>
         private val view: ${viewClass}
 ): ${contractClass}.ViewMethod
