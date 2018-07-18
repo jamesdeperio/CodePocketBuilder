@@ -5,16 +5,22 @@
 package ${packageName}.integration.network
 
 import android.content.Context
-import jdp.pocketlib.service.RetrofitService
-import retrofit2.Converter
+import java.io.IOException
+import jdp.pocketlib.service.RetrofitManager
 import retrofit2.CallAdapter
+import retrofit2.Converter
 
-class NetworkService(
-        private val context: Context
-) : RetrofitService(context) {
-    override fun initConverterFactory(): Converter.Factory = null //todo Moshi , Gson, jackson
-    override fun initRxAdapterFactory(): CallAdapter.Factory =null
-    override fun initCacheSize(): Int = 1
+class NetworkManager(context: Context) : RetrofitManager(context) {
+
     override fun initBaseURL(): String = ""
 
+    override fun initCacheSize(): Int = 0
+
+    override fun initConverterFactory(): Converter.Factory = null
+
+    override fun initRxAdapterFactory(): CallAdapter.Factory = null
+
+    override fun isDebugMode(): Boolean = false
+
+    override fun noInternetConnectionHandler(): IOException = null
 }

@@ -11,7 +11,7 @@ import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 import ${packageName}.integration.bus.EventBus;
-import ${packageName}.integration.network.NetworkService;
+import ${packageName}.integration.network.NetworkManager;
 import ${packageName}.global.scope.ApplicationScope;
 
 @Module
@@ -26,8 +26,8 @@ public abstract class ApplicationBindingModule {
 
         @ApplicationScope
             @Provides
-            public static NetworkService provideNetworkService(Context context){
-             return new NetworkService(context);
+            public static NetworkManager provideNetworkManager(Context context){
+             return new NetworkManager(context);
             }
     //todo provide dao,service, etc.. to inject globally
 }

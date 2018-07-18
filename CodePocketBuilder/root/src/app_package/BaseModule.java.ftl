@@ -4,15 +4,14 @@
  **/
 package ${packageName}.appmodule.${packageFolderName};
 
-
-import dagger.Binds;
-import dagger.Module;
-import dagger.Provides;
-import ${packageName}.global.scope.${scope};
-import io.reactivex.disposables.CompositeDisposable;
-import ${packageName}.R;
-import butterknife.ButterKnife;
-import kotlin.jvm.JvmStatic;
+import android.annotation.SuppressLint
+import dagger.Binds
+import dagger.Module
+import dagger.Provides
+import ${packageName}.global.scope.${scope}
+import io.reactivex.disposables.CompositeDisposable
+import ${packageName}.R
+import android.support.v4.app.Fragment
  @Module
 public final class ${moduleClass} {
 
@@ -23,28 +22,40 @@ public final class ${moduleClass} {
       }
 
          <#if scope== "ActivityScope">
+                 @SuppressLint("InflateParams")
                     @ActivityScope
                     @Provides
                     @JvmStatic
-                    public static ${contractClass}.ViewMethod provideViewMethod(${controllerClass} controller,CompositeDisposable disposableContainer)  {
-                          ${viewClass} view = new ${viewClass}(controller, disposableContainer);
-                          controller.setContentView(R.layout.${layoutName});
-                          controller.binder.add(ButterKnife.bind(view,controller));
-                          controller.binder.add(ButterKnife.bind(controller,controller));
-                          return view;
+                    public static ${viewClass}  provideComponent(${controllerClass} controller) {
+                        val view= controller.getLayoutInflater().inflate(R.layout.${layoutName},null);
+                        controller.setContentView(view);
+                        return new ${viewClass}(view,( ${contractClass}.Event)controller);
+                    }
+
+                    @ActivityScope
+                    @Provides
+                    @JvmStatic
+                    public static ${contractClass}.ViewMethod provideViewMethod(${controllerClass} controller,${viewClass} view)  {
+                          return  new ${viewImplClass}(controller, view);
                       }
 
              <#elseif scope== "FragmentScope">
+              @SuppressLint("InflateParams")
+                                 @ActivityScope
+                                 @Provides
+                                 @JvmStatic
+                                 public static ${viewClass}  provideComponent(${controllerClass} controller) {
+                                   controller.rootView= controller.getLayoutInflater().inflate(R.layout.${layoutName},controller.container ,false);
+                                      return new ${viewClass}( controller.rootView,( ${contractClass}.Event)controller);
+                                 }
+
+
              @SuppressWarnings("ConstantConditions")
         @FragmentScope
           @Provides
           @JvmStatic
-             public static ${contractClass}.ViewMethod provideViewMethod(${controllerClass} controller,CompositeDisposable disposableContainer)  {
-             ${viewClass}  view = new  ${viewClass} (controller.getContext(), disposableContainer);
-              controller.setRootView(controller.getLayoutInflater().inflate(R.layout.${layoutName},controller.container ,false));
-              controller.binder.add(ButterKnife.bind(view,controller.getRootView()));
-              controller.binder.add(ButterKnife.bind(controller,controller.getRootView()));
-              return view;
+             public static ${contractClass}.ViewMethod provideViewMethod(${controllerClass} controller,${viewClass} view)  {
+                return  new ${viewImplClass}(controller, view);
           }
           </#if>
 

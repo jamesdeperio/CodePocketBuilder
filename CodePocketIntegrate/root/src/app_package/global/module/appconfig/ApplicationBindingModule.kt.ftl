@@ -12,7 +12,7 @@ import dagger.Module
 import dagger.Provides
 import ${packageName}.integration.bus.EventBus
 import ${packageName}.global.scope.ApplicationScope
-import ${packageName}.integration.network.NetworkService
+import ${packageName}.integration.network.NetworkManager
 
 @Module
 abstract class ApplicationBindingModule {
@@ -29,7 +29,7 @@ abstract class ApplicationBindingModule {
          @ApplicationScope
          @Provides
          @JvmStatic
-         fun provideNetworkService(context: Context): NetworkService = NetworkService(context = context)
+         fun provideNetworkManager(context: Context): NetworkManager = NetworkManager(context = context)
 
      //todo provide dao,service, etc.. to inject globally
     }

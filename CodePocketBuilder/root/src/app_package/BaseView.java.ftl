@@ -4,15 +4,14 @@
  **/
  package ${packageName}.appmodule.${packageFolderName};
 
-import android.content.Context;
-import io.reactivex.internal.disposables.DisposableContainer;
+import android.view.View
 
- public class ${viewClass} implements ${contractClass}.ViewMethod {
-   private Context context;
-   private DisposableContainer subscription;
+ public class ${viewClass}  {
+   private View view;
+   private ${contractClass}.Event event;
 
-        public ${viewClass} (Context context,DisposableContainer subscription) {
+        public ${viewClass} (View view,${contractClass}.Event event) {
             this.context=context;
-            this.subscription=subscription;
+            this.event=event;
         }
 }

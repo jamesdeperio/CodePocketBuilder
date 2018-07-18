@@ -26,6 +26,7 @@
     <open file="${srcOut}${packageFolderName}/appmodule/${viewClass}View.kt"/>
 
 <#else>
+
 <instantiate from="root/src/app_package/BaseController.java.ftl"
                     to="${escapeXmlAttribute(srcOut)}/appmodule/${packageFolderName}/${controllerClass}.java" />
 
@@ -33,7 +34,10 @@
                     to="${escapeXmlAttribute(srcOut)}/appmodule/${packageFolderName}/${contractClass}.java" />
 
      <instantiate from="root/src/app_package/BaseView.java.ftl"
-                    to="${escapeXmlAttribute(srcOut)}/appmodule/${packageFolderName}/${viewClass}.java" />
+                       to="${escapeXmlAttribute(srcOut)}/appmodule/${packageFolderName}/${viewClass}.java" />
+
+  <instantiate from="root/src/app_package/BaseViewImpl.java.ftl"
+                    to="${escapeXmlAttribute(srcOut)}/appmodule/${packageFolderName}/${viewImplClass}.java" />
 
      <instantiate from="root/src/app_package/BasePresenter.java.ftl"
                     to="${escapeXmlAttribute(srcOut)}/appmodule/${packageFolderName}/${presenterClass}.java" />
@@ -45,7 +49,6 @@
                     to="${escapeXmlAttribute(srcOut)}/appmodule/${packageFolderName}/${moduleClass}.java" />
 
     <open file="${srcOut}${packageFolderName}/appmodule/${viewClass}View.java"/>
-
 </#if>
 
 
