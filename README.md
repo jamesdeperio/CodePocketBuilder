@@ -4,13 +4,35 @@ extract template.rar to Android Studio\plugins\android\lib\templates\
 
 root build.gradle
 ``` gradle
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.51'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
 allprojects {
     repositories {
         google()
         jcenter()
-        maven {    url 'https://jitpack.io' }
+        maven {
+            url 'https://jitpack.io'
+        }
     }
 }
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+
 
 ```
 build.gradle
@@ -18,32 +40,47 @@ build.gradle
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     defaultConfig {
-          multiDexEnabled true
+        applicationId "YOUR APP ID HERE"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
     }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.23.4"
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-  //image processor
+
+    /* BASE CLASSES */
+    implementation 'com.github.jamesdeperio:PocketLib:2.0.5'
+    
+    /* GLIDE */
     implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.3.1'
     kapt 'com.github.bumptech.glide:compiler:4.7.1'
-
-    /* BUTTERKNIFE INJECTION */
-    ext.butterknife_version = '8.8.1'
-    implementation "com.jakewharton:butterknife:$butterknife_version"
-    kapt "com.jakewharton:butterknife-compiler:$butterknife_version"
-
+  
     /* GOOGLE DAGGER INJECTION */
-    ext.dagger_version = '2.15'
+    ext.dagger_version = '2.16'
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
     implementation "com.google.dagger:dagger:$dagger_version"
@@ -52,29 +89,39 @@ dependencies {
 
     /* ANDROID SUPPORT LIBRARIES */
     ext.android_support_version = '27.1.1'
-    ext.android_support_multidex_version = '1.0.3'
+    ext.android_support_constraint_version = '1.1.2'
     implementation "com.android.support:support-annotations:$android_support_version"
-    implementation "com.android.support:appcompat-v7:$android_support_version"
-    implementation "com.android.support:design:$android_support_version"
-    implementation "com.android.support:recyclerview-v7:$android_support_version"
+    //noinspection GradleCompatible
     implementation "com.android.support:cardview-v7:$android_support_version"
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation "com.android.support.constraint:constraint-layout:$android_support_constraint_version"
+    ext.android_support_multidex_version = '1.0.3'
     implementation "com.android.support:multidex:$android_support_multidex_version"
-
-    implementation 'com.github.jamesdeperio:pocketlib:57c3cd912d'
-
-    /*CONVERTER */
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-
+   
+ 
     /*RXJAVA */
-    ext.rxjava_version = '2.1.12'
-    ext.rxandroid_version = '2.0.2'
-    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
-    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+     ext.rxjava_version = '2.1.14'
+     ext.rxandroid_version = '2.0.2'
+     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+     implementation "io.reactivex.rxjava2:rxkotlin:$rxandroid_version"
+     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+          
+     /*CONVERTER */
+        implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+         implementation 'com.tickaroo.tikxml:annotation:0.8.13'
+         implementation 'com.tickaroo.tikxml:core:0.8.13'
+         kapt 'com.tickaroo.tikxml:processor:0.8.13'
+         implementation 'com.tickaroo.tikxml:retrofit-converter:0.8.13'
+
 }
+
 kapt {
     correctErrorTypes = true
     generateStubs = true
+}
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
 }
 ```
