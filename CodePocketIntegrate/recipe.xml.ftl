@@ -66,7 +66,7 @@
                     to="${escapeXmlAttribute(srcOut)}/global/scope/ServiceScope.kt" />
 
   <instantiate from="root/src/app_package/integration/network/NetworkService.kt.ftl"
-                    to="${escapeXmlAttribute(srcOut)}/integration/network/NetworkService.kt" />
+                    to="${escapeXmlAttribute(srcOut)}/integration/network/NetworkManager.kt" />
 <instantiate from="root/src/app_package/integration/bus/EventBus.kt.ftl"
                     to="${escapeXmlAttribute(srcOut)}/integration/bus/EventBus.kt" />
 <#else>
@@ -111,7 +111,7 @@
                     to="${escapeXmlAttribute(srcOut)}/global/scope/ServiceScope.java" />
 
   <instantiate from="root/src/app_package/integration/network/NetworkService.java.ftl"
-                    to="${escapeXmlAttribute(srcOut)}/integration/network/NetworkService.java" />
+                    to="${escapeXmlAttribute(srcOut)}/integration/network/NetworkManager.java" />
 <instantiate from="root/src/app_package/integration/bus/EventBus.java.ftl"
                     to="${escapeXmlAttribute(srcOut)}/integration/bus/EventBus.java" />
 </#if>

@@ -23,10 +23,15 @@
         <option id="DIBaseFragment">DIBaseFragment</option>
         <option id="DIBaseSwipeFragment">DIBaseSwipeFragment</option>
     </parameter>
+
     <parameter id="scope" name="Scope" type="enum" default="ActivityScope" help="Choose scope">
         <option id="ActivityScope">ActivityScope</option>
         <option id="FragmentScope">FragmentScope</option>
       </parameter>
+    <parameter id="withAdapter" name="Add Adapter?" type="enum" default="YES" help="Do you want to add adapter and viewholder class?">
+        <option id="YES">YES</option>
+        <option id="NO">NO</option>
+    </parameter>
 
     <parameter
         id="contractClass"
@@ -102,6 +107,16 @@
         suggest="activity_${extractLetters(prefixName?lower_case)}"
         default="activity_main"
         help="The name of the layout to create for the activity" />
+
+    <parameter
+        id="layoutList"
+        name="layoutList"
+        visibility="false"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="item_list_${extractLetters(prefixName?lower_case)}"
+        default="item_list_main"
+        help="Note: You should add adapter.\nThe name of the layout item list to create for the activity" />
 
 
     <parameter

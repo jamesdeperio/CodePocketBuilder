@@ -7,19 +7,19 @@
 import android.content.Context;
 import android.support.v4.app.Fragment;
 
- public class ${viewClass} implements ${contractClass}.ViewMethod {
+ public class ${viewImplClass} implements ${contractClass}.ViewMethod {
   <#if scope== "ActivityScope">
         private Context context;
+     private ${viewClass} view;
 
-
-     public ${viewClass} (Context context, ${viewClass} view) {
+     public ${viewImplClass} (Context context, ${viewClass} view) {
             this.context=context;
             this.view=view;
         }
         <#elseif scope== "FragmentScope">
            private Fragment fragment;
               private ${viewClass} view;
-              public ${viewClass} (Fragment fragment, ${viewClass} view) {
+              public ${viewImplClass} (Fragment fragment, ${viewClass} view) {
                        this.fragment=fragment;
                        this.view=view;
                    }

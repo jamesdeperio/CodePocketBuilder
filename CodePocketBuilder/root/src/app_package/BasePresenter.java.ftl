@@ -5,8 +5,18 @@
 package ${packageName}.appmodule.${packageFolderName};
 
 public class ${presenterClass} implements ${contractClass}.Presenter {
-    private ${contractClass}.ViewMethod viewMethod;
-    public ${presenterClass}(${contractClass}.ViewMethod viewMethod) {
-        this.viewMethod=viewMethod;
-    }
+
+<#if withAdapter== "YES">
+    private ${prefixName}Adapter adapter;
+        private ${contractClass}.ViewMethod viewMethod;
+        public ${presenterClass}(${contractClass}.ViewMethod viewMethod,${prefixName}Adapter adapter) {
+            this.viewMethod=viewMethod;
+            this.adapter=adapter;
+        }
+<#elseif withAdapter== "NO">
+     private ${contractClass}.ViewMethod viewMethod;
+     public ${presenterClass}(${contractClass}.ViewMethod viewMethod) {
+         this.viewMethod=viewMethod;
+     }
+ </#if>
 }
