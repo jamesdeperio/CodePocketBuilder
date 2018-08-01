@@ -72,7 +72,7 @@ dependencies {
 
 
     /* BASE CLASSES */
-    implementation 'com.github.jamesdeperio:PocketLib:2.0.5'
+    implementation 'com.github.jamesdeperio:PocketLib:2.0.6'
     
     /* GLIDE */
     implementation 'com.github.bumptech.glide:glide:4.7.1'
@@ -99,18 +99,18 @@ dependencies {
    
  
     /*RXJAVA */
-     ext.rxjava_version = '2.1.14'
+     ext.rxjava_version = '2.2.0'
      ext.rxandroid_version = '2.0.2'
      implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
      implementation "io.reactivex.rxjava2:rxkotlin:$rxandroid_version"
      implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
           
      /*CONVERTER */
-        implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-         implementation 'com.tickaroo.tikxml:annotation:0.8.13'
-         implementation 'com.tickaroo.tikxml:core:0.8.13'
-         kapt 'com.tickaroo.tikxml:processor:0.8.13'
-         implementation 'com.tickaroo.tikxml:retrofit-converter:0.8.13'
+     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+     implementation 'com.tickaroo.tikxml:annotation:0.8.13'
+     implementation 'com.tickaroo.tikxml:core:0.8.13'
+     kapt 'com.tickaroo.tikxml:processor:0.8.13'
+     implementation 'com.tickaroo.tikxml:retrofit-converter:0.8.13'
 
 }
 
