@@ -29,5 +29,13 @@ public abstract class DIBaseActivity extends BaseActivity implements HasSupportF
     public  AndroidInjector<android.support.v4.app.Fragment> supportFragmentInjector() {
         return supportFragmentInjector;
     }
+  @Override
+    public void initialization(Bundle savedInstanceState) {
 
+   }
+
+    @Override
+    public void onLoadEvent(Bundle savedInstanceState) {
+
+    }
 }

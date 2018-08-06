@@ -10,10 +10,11 @@ interface ${contractClass} {
     interface ViewMethod
 
     interface Presenter
-
+<#if withAdapter== "YES">
   interface Adapter {
         fun refreshAll(): Job
         fun refreshLastInserted(): Job
          fun filter(query: String): List<Any>
     }
+    </#if>
 }

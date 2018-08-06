@@ -34,4 +34,14 @@ public abstract class DIBaseFragment extends BaseFragment implements HasSupportF
     public AndroidInjector<Fragment> supportFragmentInjector() {
         return childFragmentInjector;
     }
+
+      @Override
+        public void initialization(Bundle savedInstanceState) {
+
+       }
+
+        @Override
+        public void onLoadEvent(Bundle savedInstanceState) {
+
+        }
 }

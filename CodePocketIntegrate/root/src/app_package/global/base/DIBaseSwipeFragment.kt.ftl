@@ -28,4 +28,12 @@ abstract class DIBaseSwipeFragment : BaseSwipeFragment(), HasSupportFragmentInje
     }
 
     override fun supportFragmentInjector(): AndroidInjector<SupportFragment> = childFragmentInjector
+
+      override fun initialization(savedInstanceState: Bundle?) {
+
+        }
+
+        override fun onLoadEvent(savedInstanceState: Bundle?) {
+
+        }
 }

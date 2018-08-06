@@ -28,4 +28,12 @@ abstract class DIBaseFragment : BaseFragment(), HasSupportFragmentInjector {
     }
 
     override fun supportFragmentInjector(): AndroidInjector<SupportFragment> = childFragmentInjector
+
+      override fun initialization(savedInstanceState: Bundle?) {
+
+        }
+
+        override fun onLoadEvent(savedInstanceState: Bundle?) {
+
+        }
 }

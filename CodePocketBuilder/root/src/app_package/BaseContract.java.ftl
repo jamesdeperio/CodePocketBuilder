@@ -14,9 +14,11 @@ public interface ${contractClass} {
     interface Presenter {
 
     }
+    <#if withAdapter== "YES">
       interface Adapter {
             boolean refreshAll();
             boolean refreshLastInserted();
             List<Object> filter(String query);
         }
+          </#if>
 }

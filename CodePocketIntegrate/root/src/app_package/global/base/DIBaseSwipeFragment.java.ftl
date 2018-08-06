@@ -34,4 +34,14 @@ public abstract class DIBaseSwipeFragment extends BaseSwipeFragment implements H
     public AndroidInjector<Fragment> supportFragmentInjector() {
         return childFragmentInjector;
     }
+
+      @Override
+        public void initialization(Bundle savedInstanceState) {
+
+       }
+
+        @Override
+        public void onLoadEvent(Bundle savedInstanceState) {
+
+        }
 }
