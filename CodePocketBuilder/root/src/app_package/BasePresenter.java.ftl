@@ -7,9 +7,9 @@ package ${packageName}.appmodule.${packageFolderName};
 public class ${presenterClass} implements ${contractClass}.Presenter {
 
 <#if withAdapter== "YES">
-    private ${prefixName}Adapter adapter;
+    private ${contractClass}.Adapter adapter;
         private ${contractClass}.ViewMethod viewMethod;
-        public ${presenterClass}(${contractClass}.ViewMethod viewMethod,${prefixName}Adapter adapter) {
+        public ${presenterClass}(${contractClass}.ViewMethod viewMethod,${contractClass}.Adapter adapter) {
             this.viewMethod=viewMethod;
             this.adapter=adapter;
         }

@@ -16,8 +16,8 @@ public interface ${contractClass} {
     }
     <#if withAdapter== "YES">
       interface Adapter {
-            boolean refreshAll();
-            boolean refreshLastInserted();
+            boolean refreshList();
+            boolean addNewItem();
             List<Object> filter(String query);
         }
           </#if>

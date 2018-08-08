@@ -6,6 +6,6 @@ package ${packageName}.appmodule.${packageFolderName}
 
 class ${presenterClass}(
     private val viewMethod: ${contractClass}.ViewMethod <#if withAdapter== "YES">,
-    private val adapter:${prefixName}Adapter
+    private val adapter:${contractClass}.Adapter
                 </#if>
 ): ${contractClass}.Presenter

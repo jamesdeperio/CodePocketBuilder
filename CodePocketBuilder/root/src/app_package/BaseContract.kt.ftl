@@ -12,8 +12,8 @@ interface ${contractClass} {
     interface Presenter
 <#if withAdapter== "YES">
   interface Adapter {
-        fun refreshAll(): Job
-        fun refreshLastInserted(): Job
+        fun refreshList(): Job
+        fun addNewItem(): Job
          fun filter(query: String): List<Any>
     }
     </#if>

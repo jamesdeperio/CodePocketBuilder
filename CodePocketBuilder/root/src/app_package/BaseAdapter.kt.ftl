@@ -16,11 +16,11 @@ class ${prefixName}Adapter : PocketAdapter(), ${contractClass}.Adapter {
 
     override fun getItemCount(): Int = objectFilteredList.size
 
-    override fun refreshAll(): Job = launch(UI){
+    override fun refreshList(): Job = launch(UI){
        notifyDataSetChanged()
     }
 
-    override fun refreshLastInserted(): Job = launch(UI){
+    override fun addNewItem(): Job = launch(UI){
         notifyItemInserted(itemCount)
     }
 

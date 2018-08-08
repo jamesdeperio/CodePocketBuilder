@@ -11,8 +11,8 @@ package ${packageName}.appmodule.${packageFolderName};
       import jdp.pocketlib.base.PocketAdapter;
 
 public class ${prefixName}Adapter extends PocketAdapter implements ${contractClass}.Adapter {
-    public List<Object> objectList= new ArrayList<>();
-    public List<Object> objectFilteredList= new ArrayList<>();
+    List<Object> objectList= new ArrayList<>();
+    List<Object> objectFilteredList= new ArrayList<>();
 
     @Override
     public int getItemCount() {
@@ -21,12 +21,12 @@ public class ${prefixName}Adapter extends PocketAdapter implements ${contractCla
 
 
     @Override
-    public boolean refreshAll() {
+    public boolean refreshList() {
         return new Handler(Looper.getMainLooper()).post(this::notifyDataSetChanged);
     }
 
     @Override
-    public boolean refreshLastInserted() {
+    public boolean addNewItem() {
         return new Handler(Looper.getMainLooper()).post(() -> notifyItemChanged(getItemCount()));
     }
 
