@@ -5,11 +5,18 @@
  package ${packageName}.integration.network;
 
 import android.content.Context;
-import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 import jdp.pocketlib.service.RetrofitManager;
 import retrofit2.CallAdapter;
 import retrofit2.Converter;
+import jdp.pocketlib.service.Gson;
+import jdp.pocketlib.service.Xml;
+import jdp.pocketlib.service.MultipleConverterFactory;
+import com.google.gson.GsonBuilder;
+import com.tickaroo.tikxml.TikXml;
+import com.tickaroo.tikxml.retrofit.TikXmlConverterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 public class NetworkManager extends RetrofitManager {
     public NetworkManager(Context context) {
@@ -30,13 +37,19 @@ public class NetworkManager extends RetrofitManager {
     @NotNull
     @Override
     public Converter.Factory initConverterFactory() {
-        return null;
+             TikXml tikXml= new TikXml.Builder().exceptionOnUnreadXml(false).build();
+             GsonBuilder gsonBuilder = new GsonBuilder();
+             gsonBuilder.setLenient();
+             return new MultipleConverterFactory.Builder()
+                     .add(Xml.class, TikXmlConverterFactory.create(tikXml))
+                     .add(Gson.class, GsonConverterFactory.create(gsonBuilder.create()))
+                     .build();
     }
 
     @NotNull
     @Override
     public CallAdapter.Factory initRxAdapterFactory() {
-        return null;
+        return new RxJava2CallAdapterFactory.create();
     }
 
     @Override
@@ -44,9 +57,4 @@ public class NetworkManager extends RetrofitManager {
         return false;
     }
 
-    @NotNull
-    @Override
-    public IOException noInternetConnectionHandler() {
-        return null;
-    }
 }

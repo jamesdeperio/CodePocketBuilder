@@ -65,18 +65,18 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.23.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.24.0"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
 
     /* BASE CLASSES */
-    implementation 'com.github.jamesdeperio:PocketLib:2.0.6'
+    implementation 'com.github.jamesdeperio:PocketLib:2.1.0'
     
     /* GLIDE */
     implementation 'com.github.bumptech.glide:glide:4.7.1'
-    implementation 'com.github.bumptech.glide:okhttp3-integration:4.3.1'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.7.1'
     kapt 'com.github.bumptech.glide:compiler:4.7.1'
   
     /* GOOGLE DAGGER INJECTION */
