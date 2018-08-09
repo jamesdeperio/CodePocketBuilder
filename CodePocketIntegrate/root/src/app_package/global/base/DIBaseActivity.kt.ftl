@@ -9,7 +9,7 @@ import android.os.Bundle
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasFragmentInjector
+import dagger.android.HasSupportFragmentInjector
 import jdp.pocketlib.base.BaseActivity
 import javax.inject.Inject
 import android.support.v4.app.Fragment as SupportFragment
