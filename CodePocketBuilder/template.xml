@@ -7,7 +7,7 @@
     minBuildApi="14"
     description="Creates a CodePocket template classes">
 
-    <category value="CodePocket DI-MVCP" />
+    <category value="CodePocketBuilder" />
     <formfactor value="Mobile" />
 
     <parameter
