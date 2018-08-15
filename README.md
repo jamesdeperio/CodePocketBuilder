@@ -1,7 +1,10 @@
 CODEPOCKET BUILDER version 1
-import setting (codepocket_color.jar)
-extract template.rar to Android Studio\plugins\android\lib\templates\
+## How to?
+* import setting (codepocket_color.jar)
+* extract template.rar to Android Studio\plugins\android\lib\templates\
+* after that template will be available in the selection
 
+### Gradle
 root build.gradle
 ``` gradle
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
@@ -73,7 +76,7 @@ dependencies {
 
     /* BASE CLASSES */
     implementation 'com.github.jamesdeperio:PocketLib:2.0.0'
-    implementation 'com.github.jamesdeperio:RetrofitKit:2.0.0'
+    implementation 'com.github.jamesdeperio:RetrofitKit:1.0.0'
     
     /* GLIDE */
     implementation 'com.github.bumptech.glide:glide:4.7.1'
