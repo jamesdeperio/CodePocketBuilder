@@ -13,6 +13,7 @@ import dagger.Provides;
 import ${packageName}.integration.bus.EventBus;
 import ${packageName}.integration.network.NetworkManager;
 import ${packageName}.global.scope.ApplicationScope;
+import io.reactivex.subjects.PublishSubject;
 
 @Module
 public abstract class ApplicationBindingModule {
@@ -20,8 +21,8 @@ public abstract class ApplicationBindingModule {
 
     @ApplicationScope
     @Provides
-    public static EventBus provideEventBus(){
-         return new EventBus();
+    public static EventBus<PublishSubject<Object>> provideEventBus(){
+         return new EventBus(PublishSubject.create());
      }
 
         @ApplicationScope

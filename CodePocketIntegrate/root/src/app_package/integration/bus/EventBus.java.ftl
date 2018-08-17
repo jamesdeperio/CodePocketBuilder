@@ -4,15 +4,20 @@
  */
  package ${packageName}.integration.bus;
 
+
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
-import io.reactivex.subjects.PublishSubject;
+import io.reactivex.subjects.Subject;
 
-public final class EventBus {
-    private final PublishSubject<Object> bus = PublishSubject.create();
+public final class EventBus<T extends Subject<Object>>  {
     private Disposable disposable;
+    private T bus;
+    public Buss(T bus) {
+        this.bus=bus;
+     }
+
     public void sendEvent(final Object object) {
         bus.onNext(object);
     }

@@ -13,6 +13,7 @@ import dagger.Provides
 import ${packageName}.integration.bus.EventBus
 import ${packageName}.global.scope.ApplicationScope
 import ${packageName}.integration.network.NetworkManager
+import io.reactivex.subjects.PublishSubject
 
 @Module
 abstract class ApplicationBindingModule {
@@ -21,10 +22,10 @@ abstract class ApplicationBindingModule {
 
      @Module
      companion object Provider {
-         @ApplicationScope
-         @Provides
-         @JvmStatic
-         fun provideEventBus(): EventBus = EventBus()
+            @ApplicationScope
+             @Provides
+             @JvmStatic
+             fun provideEventBus(): EventBus<PublishSubject<Any>> = EventBus(bus = PublishSubject.create())
 
          @ApplicationScope
          @Provides
