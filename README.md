@@ -75,8 +75,8 @@ dependencies {
 
 
     /* BASE CLASSES */
-    implementation 'com.github.jamesdeperio:PocketLib:2.0.0'
-    implementation 'com.github.jamesdeperio:RetrofitKit:1.0.0'
+    implementation 'com.github.jamesdeperio:PocketLib:2.0'
+    implementation 'com.github.jamesdeperio:RetrofitKit:1.0'
     
     /* GLIDE */
     implementation 'com.github.bumptech.glide:glide:4.7.1'
@@ -94,6 +94,12 @@ dependencies {
     /* ANDROID SUPPORT LIBRARIES */
     ext.android_support_version = '27.1.1'
     ext.android_support_constraint_version = '1.1.2'
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:$android_support_version"
+    //noinspection GradleCompatible
+    implementation "com.android.support:design:$android_support_version"
+    //noinspection GradleCompatible
+    implementation "com.android.support:recyclerview-v7:$android_support_version"
     implementation "com.android.support:support-annotations:$android_support_version"
     //noinspection GradleCompatible
     implementation "com.android.support:cardview-v7:$android_support_version"
