@@ -15,7 +15,7 @@ public class ${prefixName}ViewHolder extends PocketViewHolder {
         this.event=event;
     }
     @Override
-    public void onBindViewHolder(View view, int position) {
+    public void onCreateViewHolder(View view, int position) {
 
     }
 }
