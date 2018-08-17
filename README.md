@@ -75,7 +75,7 @@ dependencies {
 
 
     /* BASE CLASSES */
-    implementation 'com.github.jamesdeperio:PocketLib:2.0'
+    implementation 'com.github.jamesdeperio:PocketLib:v2.0.0'
     implementation 'com.github.jamesdeperio:RetrofitKit:1.0'
     
     /* GLIDE */

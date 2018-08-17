@@ -10,7 +10,7 @@ import jdp.pocketlib.base.PocketViewHolder
 class ${prefixName}ViewHolder(
         private val adapter: ${prefixName}Adapter,
         private val event: ${contractClass}.Event) : PocketViewHolder() {
-    override fun onCreateViewHolder(view: View, position: Int) {
+    override fun onBindViewHolder(view: View, position: Int) {
 
     }
 }
