@@ -1,7 +1,10 @@
 CODEPOCKET BUILDER version 1
-import setting (codepocket_color.jar)
-extract template.rar to Android Studio\plugins\android\lib\templates\
+## How to?
+* import setting (codepocket_color.jar)
+* extract template.rar to Android Studio\plugins\android\lib\templates\
+* after that template will be available in the selection
 
+### Gradle
 root build.gradle
 ``` gradle
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
@@ -72,7 +75,8 @@ dependencies {
 
 
     /* BASE CLASSES */
-    implementation 'com.github.jamesdeperio:PocketLib:2.1.0'
+    implementation 'com.github.jamesdeperio:PocketLib:2.0.0'
+    implementation 'com.github.jamesdeperio:RetrofitKit:1.0.0'
     
     /* GLIDE */
     implementation 'com.github.bumptech.glide:glide:4.7.1'
@@ -80,7 +84,7 @@ dependencies {
     kapt 'com.github.bumptech.glide:compiler:4.7.1'
   
     /* GOOGLE DAGGER INJECTION */
-    ext.dagger_version = '2.16'
+    ext.dagger_version = '2.17'
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
     implementation "com.google.dagger:dagger:$dagger_version"
