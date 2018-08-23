@@ -1,8 +1,4 @@
 #CODEPOCKET BUILDER
-[![Release](https://jitpack.io/v/jamesdeperio/CodePocketBuilder.svg)](https://jitpack.io/#jamesdeperio/CodePocketBuilder)
-[![GitHub release](https://img.shields.io/github/release/jamesdeperio/CodePocketBuilder.svg)](https://GitHub.com/jamesdeperio/CodePocketBuilder/releases/)
-[![GitHub tag](https://img.shields.io/github/tag/jamesdeperio/CodePocketBuilder.svg)](https://GitHub.com/jamesdeperio/CodePocketBuilder/tags/)
-[![GitHub commits](https://img.shields.io/github/commits-since/jamesdeperio/CodePocketBuilder/v2.0.0.svg)](https://GitHub.com/jamesdeperio/CodePocketBuilder/commit/)
 [![HitCount](http://hits.dwyl.io/jamesdeperio/CodePocketBuilder.svg)](http://hits.dwyl.io/jamesdeperio/CodePocketBuilder)
 [![License](https://img.shields.io/badge/License%20-Apache%202-337ab7.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/jamesdeperio/CodePocketBuilder/graphs/commit-activity)
