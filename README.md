@@ -11,7 +11,7 @@
 
 - this code template helps to create a clean and modular design pattern using dagger2.
 ### Pattern
-* Contract - interface that holds methods annd callback.
+* Contract - interface that holds methods and callback.
 * View - instantiation and creation of view.
 * ViewImpl - class in charge in using and modifying views.
 * Controller - this class is the activity/fragment. Handles all event listener.
