@@ -9,10 +9,24 @@
 [![GitHub watchers](https://img.shields.io/github/watchers/jamesdeperio/CodePocketBuilder.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/jamesdeperio/CodePocketBuilder/watchers/)
 [![GitHub followers](https://img.shields.io/github/followers/jamesdeperio.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/jamesdeperio?tab=followers)
 
+- this code template helps to create a clean and modular design pattern using dagger2.
+### Pattern
+* Contract - interface that holds methods annd callback.
+* View - instantiation and creation of view.
+* ViewImpl - class in charge in using and modifying views.
+* Controller - this class is the activity/fragment. Handles all event listener.
+* Impl - this class is the presenter. Handles all repository and process event.
+* Module - this class is the binding all classes. Provider of requirement.
+* ViewHolder - bind your recyclerview holder.
+* Adapter - recyclerview adapter.
+
 ## How to?
 * import setting (codepocket_color.jar)
 * extract template.rar to Android Studio\plugins\android\lib\templates\
 * after that template will be available in the selection
+## TODO
+* documentation with video.
+* example project
 
 ### Gradle
 root build.gradle
