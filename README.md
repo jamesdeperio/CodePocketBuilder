@@ -34,7 +34,7 @@ root build.gradle
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.2.60'
+    ext.kotlin_version = '1.2.61'
     repositories {
         google()
         jcenter()
@@ -99,8 +99,8 @@ dependencies {
 
 
     /* BASE CLASSES */
-    implementation 'com.github.jamesdeperio:PocketLib:v2.0.0'
-    implementation 'com.github.jamesdeperio:RetrofitKit:v1.0.0'
+    implementation 'com.github.jamesdeperio:PocketLib:v2.0.1'
+    implementation 'com.github.jamesdeperio:RetrofitKit:v1.0.1'
     
     /* GLIDE */
     implementation 'com.github.bumptech.glide:glide:4.7.1'
