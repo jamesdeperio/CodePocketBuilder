@@ -136,7 +136,7 @@ dependencies {
      ext.rxjava_version = '2.2.0'
      ext.rxandroid_version = '2.0.2'
      implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
-     implementation "io.reactivex.rxjava2:rxkotlin:$rxandroid_version"
+     implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
      implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
           
      /*CONVERTER */
