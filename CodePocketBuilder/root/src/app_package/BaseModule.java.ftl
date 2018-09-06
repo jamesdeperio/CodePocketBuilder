@@ -77,8 +77,8 @@ public final class ${moduleClass} {
           </#if>
            @${scope}
                 @Provides
-                public static ${contractClass}.Presenter providePresenter(${contractClass}.ViewMethod viewMethod,${contractClass}.Adapter adapter){
-                      return new ${presenterClass}(viewMethod,adapter);
+                public static ${contractClass}.Presenter providePresenter(${contractClass}.ViewMethod viewMethod,${prefixName}Adapter adapter){
+                      return new ${presenterClass}(viewMethod,(${contractClass}.Adapter) adapter);
                  }
 <#elseif withAdapter== "NO">
   <#if scope== "ActivityScope">

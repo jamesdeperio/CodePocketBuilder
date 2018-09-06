@@ -92,10 +92,10 @@ import jdp.pocketlib.base.PocketAdapter
                  )
                </#if>
     @${scope} @Provides @JvmStatic
-         fun providePresenter(viewMethod: ${contractClass}.ViewMethod,adapter:${contractClass}.Adapter): ${contractClass}.Presenter
+         fun providePresenter(viewMethod: ${contractClass}.ViewMethod,adapter:${prefixName}Adapter): ${contractClass}.Presenter
             = ${presenterClass}(
             viewMethod=viewMethod,
-            adapter=adapter
+            adapter=adapter as ${contractClass}.Adapter
             )
   <#elseif withAdapter== "NO">
      <#if scope== "ActivityScope">
