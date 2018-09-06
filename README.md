@@ -8,7 +8,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/jamesdeperio/CodePocketBuilder.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/jamesdeperio/CodePocketBuilder/stargazers/)
 [![GitHub watchers](https://img.shields.io/github/watchers/jamesdeperio/CodePocketBuilder.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/jamesdeperio/CodePocketBuilder/watchers/)
 [![GitHub followers](https://img.shields.io/github/followers/jamesdeperio.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/jamesdeperio?tab=followers)
-
+### [DEMO APK](https://github.com/jamesdeperio/CodePocketBuilderDemo/blob/master/app-debug.apk)
 - this code template helps to create a clean and modular design pattern using dagger2.
 ### Pattern
 * Contract - interface that holds methods and callback.
@@ -26,8 +26,6 @@
 * after that template will be available in the selection
 ## TODO
 * documentation with video.
-* example project
-
 ### Gradle
 root build.gradle
 ``` gradle
