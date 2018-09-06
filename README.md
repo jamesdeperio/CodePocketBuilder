@@ -99,7 +99,7 @@ dependencies {
 
 
     /* BASE CLASSES */
-    implementation 'com.github.jamesdeperio:PocketLib:v2.0.1'
+    implementation 'com.github.jamesdeperio:PocketLib:v2.0.3'
     implementation 'com.github.jamesdeperio:RetrofitKit:v1.0.1'
 
     /* GLIDE */
