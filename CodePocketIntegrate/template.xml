@@ -2,7 +2,7 @@
 <template
     format="5"
     revision="5"
-    name="create initial setup"
+    name="1. Create Initial Setup"
     minApi="9"
     minBuildApi="14"
     description="Creates a CodePocket template classes">

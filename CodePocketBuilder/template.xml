@@ -2,7 +2,7 @@
 <template
     format="5"
     revision="5"
-    name="build"
+    name="2. Build"
     minApi="9"
     minBuildApi="14"
     description="Creates a CodePocket template classes">
