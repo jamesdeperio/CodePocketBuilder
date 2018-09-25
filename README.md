@@ -90,19 +90,22 @@ android {
 dependencies {
      implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.24.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.25.3"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+    /* SQLITE ORM*/
+    implementation "org.greenrobot:greendao:$greendao_version"
+    //design
+    implementation 'com.yqritc:android-scalablevideoview:1.0.4'
+    ext.material_rey_version = '1.2.5'
+    implementation "com.github.rey5137:material:$material_rey_version"
+    implementation 'me.grantland:autofittextview:0.2.1'
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.11.0'
 
-    /* BASE CLASSES */
-    implementation 'com.github.jamesdeperio:PocketLib:v2.0.3'
-    implementation 'com.github.jamesdeperio:RetrofitKit:v1.0.1'
-
-    /* GLIDE */
+    //image processor
     implementation 'com.github.bumptech.glide:glide:4.8.0'
-    implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
     kapt 'com.github.bumptech.glide:compiler:4.8.0'
 
     /* GOOGLE DAGGER INJECTION */
@@ -114,20 +117,20 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$dagger_version"
 
     /* ANDROID SUPPORT LIBRARIES */
-    ext.android_support_version = '27.1.1'
-    ext.android_support_constraint_version = '1.1.3'
+    ext.android_support_version = '28.0.0'
+    implementation "com.android.support:support-annotations:$android_support_version"
+    //noinspection GradleCompatible
+    implementation "com.android.support:cardview-v7:$android_support_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    ext.android_support_multidex_version = '1.0.3'
+    implementation "com.android.support:multidex:$android_support_multidex_version"
     //noinspection GradleCompatible
     implementation "com.android.support:appcompat-v7:$android_support_version"
     //noinspection GradleCompatible
     implementation "com.android.support:design:$android_support_version"
     //noinspection GradleCompatible
     implementation "com.android.support:recyclerview-v7:$android_support_version"
-    implementation "com.android.support:support-annotations:$android_support_version"
-    //noinspection GradleCompatible
-    implementation "com.android.support:cardview-v7:$android_support_version"
-    implementation "com.android.support.constraint:constraint-layout:$android_support_constraint_version"
-    ext.android_support_multidex_version = '1.0.3'
-    implementation "com.android.support:multidex:$android_support_multidex_version"
+    implementation "com.android.support:support-v4:$android_support_version"
 
 
     /*RXJAVA */
