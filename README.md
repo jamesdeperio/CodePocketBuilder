@@ -22,7 +22,7 @@
 
 ## How to?
 * import setting (codepocket_color.jar)
-* extract template.rar to Android Studio\plugins\android\lib\templates\
+* extract template.rar to Android Studio\plugins\android\lib\templates\activities\
 * after that template will be available in the selection
 ## TODO
 * documentation with video.
