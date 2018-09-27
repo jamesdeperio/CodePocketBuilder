@@ -32,13 +32,13 @@ root build.gradle
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.2.61'
+    ext.kotlin_version = '1.2.71'
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.android.tools.build:gradle:3.2.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -90,16 +90,18 @@ android {
 dependencies {
      implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.24.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.25.3"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
 
     /* BASE CLASSES */
-    implementation 'com.github.jamesdeperio:PocketLib:v2.0.3'
-    implementation 'com.github.jamesdeperio:RetrofitKit:v1.0.1'
-
+    implementation 'com.github.jamesdeperio:PocketLib:v2.1.0'
+    implementation 'com.github.jamesdeperio:RetrofitKit:v1.0.2'
+   implementation 'me.yokeyword:swipebackfragment:0.4.0'
+    implementation 'com.airbnb.android:lottie:2.7.0'
+    
     /* GLIDE */
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
@@ -114,7 +116,7 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$dagger_version"
 
     /* ANDROID SUPPORT LIBRARIES */
-    ext.android_support_version = '27.1.1'
+    ext.android_support_version = '28.0.0'
     ext.android_support_constraint_version = '1.1.3'
     //noinspection GradleCompatible
     implementation "com.android.support:appcompat-v7:$android_support_version"
@@ -137,6 +139,10 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
 
+    /*RETROFIT*/
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    
     /*CONVERTER */
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.tickaroo.tikxml:annotation:0.8.13'
