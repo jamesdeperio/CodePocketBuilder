@@ -22,7 +22,7 @@
 
 ## How to?
 * import setting (codepocket_color.jar)
-* extract template.rar to Android Studio\plugins\android\lib\templates\activities\
+* extract template.rar to Android Studio\plugins\android\lib\templates\
 * after that template will be available in the selection
 ## TODO
 * documentation with video.
@@ -38,7 +38,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.2'
+        classpath 'com.android.tools.build:gradle:3.2.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -95,17 +95,16 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    /* SQLITE ORM*/
-    implementation "org.greenrobot:greendao:$greendao_version"
-    //design
-    implementation 'com.yqritc:android-scalablevideoview:1.0.4'
-    ext.material_rey_version = '1.2.5'
-    implementation "com.github.rey5137:material:$material_rey_version"
-    implementation 'me.grantland:autofittextview:0.2.1'
-    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.11.0'
 
-    //image processor
+    /* BASE CLASSES */
+    implementation 'com.github.jamesdeperio:PocketLib:v2.1.0'
+    implementation 'com.github.jamesdeperio:RetrofitKit:v1.0.2'
+   implementation 'me.yokeyword:swipebackfragment:0.4.0'
+    implementation 'com.airbnb.android:lottie:2.7.0'
+    
+    /* GLIDE */
     implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
     kapt 'com.github.bumptech.glide:compiler:4.8.0'
 
     /* GOOGLE DAGGER INJECTION */
@@ -118,19 +117,19 @@ dependencies {
 
     /* ANDROID SUPPORT LIBRARIES */
     ext.android_support_version = '28.0.0'
-    implementation "com.android.support:support-annotations:$android_support_version"
-    //noinspection GradleCompatible
-    implementation "com.android.support:cardview-v7:$android_support_version"
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    ext.android_support_multidex_version = '1.0.3'
-    implementation "com.android.support:multidex:$android_support_multidex_version"
+    ext.android_support_constraint_version = '1.1.3'
     //noinspection GradleCompatible
     implementation "com.android.support:appcompat-v7:$android_support_version"
     //noinspection GradleCompatible
     implementation "com.android.support:design:$android_support_version"
     //noinspection GradleCompatible
     implementation "com.android.support:recyclerview-v7:$android_support_version"
-    implementation "com.android.support:support-v4:$android_support_version"
+    implementation "com.android.support:support-annotations:$android_support_version"
+    //noinspection GradleCompatible
+    implementation "com.android.support:cardview-v7:$android_support_version"
+    implementation "com.android.support.constraint:constraint-layout:$android_support_constraint_version"
+    ext.android_support_multidex_version = '1.0.3'
+    implementation "com.android.support:multidex:$android_support_multidex_version"
 
 
     /*RXJAVA */
@@ -140,6 +139,10 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
 
+    /*RETROFIT*/
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    
     /*CONVERTER */
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.tickaroo.tikxml:annotation:0.8.13'
