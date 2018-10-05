@@ -57,7 +57,7 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-
+}
 
 ```
 build.gradle
