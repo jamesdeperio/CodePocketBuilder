@@ -46,7 +46,7 @@ public class NetworkManager extends RetrofitManager {
 
     @NotNull
     @Override
-    public CallAdapter.Factory initRxAdapterFactory() {
+    public CallAdapter.Factory initCallAdapterFactory() {
         return new RxJava2CallAdapterFactory.create();
     }
 

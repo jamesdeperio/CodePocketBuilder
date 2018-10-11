@@ -28,7 +28,7 @@ class NetworkManager(context: Context) : RetrofitManager(context) {
                .build()
 
 
-    override fun initRxAdapterFactory(): CallAdapter.Factory = RxJava2CallAdapterFactory.create()
+    override fun initCallAdapterFactory(): CallAdapter.Factory = RxJava2CallAdapterFactory.create()
 
     override fun isPrintLogEnabled(): Boolean = false
 
