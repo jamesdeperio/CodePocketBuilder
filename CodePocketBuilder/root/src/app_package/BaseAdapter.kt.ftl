@@ -5,9 +5,9 @@
 package ${packageName}.appmodule.${packageFolderName};
 
 import jdp.pocketlib.base.PocketAdapter
-import kotlinx.coroutines.experimental.Job
-import kotlinx.coroutines.experimental.android.UI
-import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.android.UI
+import kotlinx.coroutines.launch
 import java.util.*
 
 class ${prefixName}Adapter : PocketAdapter(), ${contractClass}.Adapter {

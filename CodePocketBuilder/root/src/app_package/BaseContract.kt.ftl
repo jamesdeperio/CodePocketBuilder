@@ -3,7 +3,7 @@
  * @author github.com/jamesdeperio
  **/
 package ${packageName}.appmodule.${packageFolderName}
-import kotlinx.coroutines.experimental.Job
+import kotlinx.coroutines.Job
 interface ${contractClass} {
     interface Event
 
