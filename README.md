@@ -32,7 +32,7 @@ root build.gradle
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.2.71'
+    ext.kotlin_version = '1.3.10'
     repositories {
         google()
         jcenter()
@@ -108,7 +108,7 @@ dependencies {
     kapt 'com.github.bumptech.glide:compiler:4.8.0'
 
     /* GOOGLE DAGGER INJECTION */
-    ext.dagger_version = '2.17'
+    ext.dagger_version = '2.19'
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
     implementation "com.google.dagger:dagger:$dagger_version"
@@ -133,10 +133,12 @@ dependencies {
 
 
     /*RXJAVA */
-    ext.rxjava_version = '2.2.2'
+    ext.rxjava_version = '2.2.3'
     ext.rxandroid_version = '2.1.0'
+    ext.rxkotlin_version = '2.2.0'
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
     implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
 
     /*RETROFIT*/
