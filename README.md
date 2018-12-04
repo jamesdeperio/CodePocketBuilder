@@ -90,7 +90,7 @@ android {
 dependencies {
      implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.25.3"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -133,7 +133,7 @@ dependencies {
 
 
     /*RXJAVA */
-    ext.rxjava_version = '2.2.3'
+    ext.rxjava_version = '2.2.4'
     ext.rxandroid_version = '2.1.0'
     ext.rxkotlin_version = '2.2.0'
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
