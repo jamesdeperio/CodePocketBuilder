@@ -67,8 +67,8 @@
         type="string"
         constraints="class|nonempty"
         suggest="${extractLetters(prefixName)}View"
-        default="MainView"
-        help="The name of the view class to create" />
+        default="MainComponent"
+        help="The name of the component class to create" />
     <parameter
         id="presenterClass"
         name="Presenter Name"
