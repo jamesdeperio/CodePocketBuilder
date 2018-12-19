@@ -1,13 +1,15 @@
 
 ![alt text](https://github.com/jamesdeperio/CodePocketBuilder/blob/master/code.png "CodePocketBuilder")
 
-[![HitCount](http://hits.dwyl.io/jamesdeperio/CodePocketBuilder.svg)](http://hits.dwyl.io/jamesdeperio/CodePocketBuilder)
 [![License](https://img.shields.io/badge/License%20-Apache%202-337ab7.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/jamesdeperio/CodePocketBuilder/graphs/commit-activity)
 [![GitHub forks](https://img.shields.io/github/forks/jamesdeperio/CodePocketBuilder.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/jamesdeperio/CodePocketBuilder/network/)
 [![GitHub stars](https://img.shields.io/github/stars/jamesdeperio/CodePocketBuilder.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/jamesdeperio/CodePocketBuilder/stargazers/)
 [![GitHub watchers](https://img.shields.io/github/watchers/jamesdeperio/CodePocketBuilder.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/jamesdeperio/CodePocketBuilder/watchers/)
 [![GitHub followers](https://img.shields.io/github/followers/jamesdeperio.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/jamesdeperio?tab=followers)
+[![HitCount](http://hits.dwyl.io/jamesdeperio/CodePocketBuilder.svg)](http://hits.dwyl.io/jamesdeperio/CodePocketBuilder)
+[![Jitpack downloads](https://jitpack.io/v/jamesdeperio/CodePocketBuilder/month.svg)](https://jitpack.io/#jamesdeperio/CodePocketBuilder)
+
 ### [DEMO APK](https://github.com/jamesdeperio/CodePocketBuilderDemo/blob/master/app-debug.apk)
 - this code template helps to create a clean and modular design pattern using dagger2.
 ### Pattern
