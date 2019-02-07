@@ -34,13 +34,13 @@ root build.gradle
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.3.11'
+    ext.kotlin_version = '1.3.21'
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'com.android.tools.build:gradle:3.3.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -92,7 +92,7 @@ android {
 dependencies {
      implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -110,7 +110,7 @@ dependencies {
     kapt 'com.github.bumptech.glide:compiler:4.8.0'
 
     /* GOOGLE DAGGER INJECTION */
-    ext.dagger_version = '2.19'
+    ext.dagger_version = '2.21'
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
     implementation "com.google.dagger:dagger:$dagger_version"
@@ -135,20 +135,20 @@ dependencies {
 
 
     /*RXJAVA */
-    ext.rxjava_version = '2.2.4'
+    ext.rxjava_version = '2.2.6'
     ext.rxandroid_version = '2.1.0'
-    ext.rxkotlin_version = '2.2.0'
+    ext.rxkotlin_version = '2.3.0'
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
     implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
     implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
 
     /*RETROFIT*/
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.13.1'
     
     /*CONVERTER */
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.tickaroo.tikxml:annotation:0.8.13'
     implementation 'com.tickaroo.tikxml:core:0.8.13'
     kapt 'com.tickaroo.tikxml:processor:0.8.13'
@@ -159,12 +159,6 @@ dependencies {
 kapt {
     correctErrorTypes = true
     generateStubs = true
-}
-
-kotlin {
-    experimental {
-        coroutines "enable"
-    }
 }
 ```
 ### LICENSE
