@@ -7,15 +7,15 @@
 import android.view.View;
 import android.content.Context;
 
-import jdp.pocketlib.base.PocketAdapter;
+import jdp.pocketlib.base.Adapter;
  public class ${viewClass}  {
  <#if withAdapter== "YES">
-     private PocketAdapter adapter;
+     private Adapter adapter;
    private View view;
    private ${contractClass}.Event event;
    private Context context;
 
-        public ${viewClass} (View view,${contractClass}.Event event,Context context, PocketAdapter adapter) {
+        public ${viewClass} (View view,${contractClass}.Event event,Context context, Adapter adapter) {
             this.view=view;
             this.event=event;
             this.context=context;

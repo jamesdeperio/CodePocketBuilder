@@ -4,23 +4,24 @@
  **/
 package ${packageName}.appmodule.${packageFolderName};
 
-import jdp.pocketlib.base.PocketAdapter
+import jdp.pocketlib.base.Adapter
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.android.UI
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.util.*
 
-class ${prefixName}Adapter : PocketAdapter(), ${contractClass}.Adapter {
+class ${prefixName}Adapter : Adapter(), ${contractClass}.Adapter {
     var objectList: MutableList<Any> = ArrayList()
     var objectFilteredList: MutableList<Any> = ArrayList()
 
     override fun getItemCount(): Int = objectFilteredList.size
 
-    override fun refreshList(): Job = launch(UI){
+    override fun refreshList(): Job = GlobalScope.launch(Dispatchers.Main){
        notifyDataSetChanged()
     }
 
-    override fun addNewItem(): Job = launch(UI){
+    override fun addNewItem(): Job = GlobalScope.launch(Dispatchers.Main){
         notifyItemInserted(itemCount)
     }
 

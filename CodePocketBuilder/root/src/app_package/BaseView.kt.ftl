@@ -6,11 +6,11 @@
 
 import android.view.View
 import android.content.Context
-import jdp.pocketlib.base.PocketAdapter
+import jdp.pocketlib.base.Adapter
  class ${viewClass}(
           view: View,
             event:${contractClass}.Event,
             context:Context<#if withAdapter== "YES">,
-            adapter:PocketAdapter
+            adapter:Adapter
             </#if>
             )

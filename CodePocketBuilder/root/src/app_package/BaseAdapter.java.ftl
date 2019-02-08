@@ -8,9 +8,9 @@ package ${packageName}.appmodule.${packageFolderName};
       import android.os.Looper;
       import java.util.ArrayList;
       import java.util.List;
-      import jdp.pocketlib.base.PocketAdapter;
+      import jdp.pocketlib.base.Adapter;
 
-public class ${prefixName}Adapter extends PocketAdapter implements ${contractClass}.Adapter {
+public class ${prefixName}Adapter extends Adapter implements ${contractClass}.Adapter {
     List<Object> objectList= new ArrayList<>();
     List<Object> objectFilteredList= new ArrayList<>();
 

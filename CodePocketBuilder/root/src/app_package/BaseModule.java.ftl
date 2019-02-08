@@ -14,7 +14,7 @@ import ${packageName}.R;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.content.Context;
-import jdp.pocketlib.base.PocketAdapter;
+import jdp.pocketlib.base.Adapter;
  @Module
 public final class ${moduleClass} {
 
@@ -40,7 +40,7 @@ public final class ${moduleClass} {
                     public static ${viewClass}  provideComponent(${controllerClass} controller,${prefixName}Adapter adapter) {
                         View view= controller.getLayoutInflater().inflate(R.layout.${layoutName},null);
                         controller.setContentView(view);
-                        return new ${viewClass}(view,( ${contractClass}.Event)controller,(Context) controller,(PocketAdapter)adapter);
+                        return new ${viewClass}(view,( ${contractClass}.Event)controller,(Context) controller,(Adapter)adapter);
                     }
 
                     @ActivityScope

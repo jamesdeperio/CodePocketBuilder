@@ -5,9 +5,9 @@
 package ${packageName}.appmodule.${packageFolderName};
 
 import android.view.View;
-import jdp.pocketlib.base.PocketViewHolder;
+import jdp.pocketlib.base.ViewHolder;
 
-public class ${prefixName}ViewHolder extends PocketViewHolder {
+public class ${prefixName}ViewHolder extends ViewHolder {
     private ${prefixName}Adapter adapter;
     private ${contractClass}.Event event;
     public ${prefixName}ViewHolder(${prefixName}Adapter adapter, ${contractClass}.Event event) {

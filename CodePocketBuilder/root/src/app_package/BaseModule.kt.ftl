@@ -12,7 +12,7 @@ import io.reactivex.disposables.CompositeDisposable
 import ${packageName}.R
 import android.support.v4.app.Fragment
 import android.content.Context
-import jdp.pocketlib.base.PocketAdapter
+import jdp.pocketlib.base.Adapter
 
  @Module
   object ${moduleClass} {
@@ -44,7 +44,7 @@ import jdp.pocketlib.base.PocketAdapter
                           view=view,
                           event=controller as ${contractClass}.Event,
                           context=controller as Context,
-                          adapter=adapter as PocketAdapter
+                          adapter=adapter as Adapter
                           )
                       }
                          @ActivityScope
@@ -78,7 +78,7 @@ import jdp.pocketlib.base.PocketAdapter
                           view =controller.rootView!!,
                           event=controller as  ${contractClass}.Event,
                           context=controller.context!!,
-                          adapter=adapter as PocketAdapter
+                          adapter=adapter as Adapter
                           )
                       }
 
