@@ -99,7 +99,7 @@ dependencies {
 
 
     /* BASE CLASSES */
-    implementation 'com.github.jamesdeperio:PocketLib:3.0.0'
+    implementation 'com.github.jamesdeperio:PocketLib:3.1.0'
     implementation 'com.github.jamesdeperio:RetrofitKit:v1.0.5'
    implementation 'me.yokeyword:swipebackfragment:0.4.0'
     implementation 'com.airbnb.android:lottie:2.7.0'
