@@ -139,8 +139,8 @@ dependencies {
 
 
     /*RXJAVA */
-    ext.rxjava_version = '2.2.6'
-    ext.rxandroid_version = '2.1.0'
+    ext.rxjava_version = '2.2.8'
+    ext.rxandroid_version = '2.1.1'
     ext.rxkotlin_version = '2.3.0'
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
     implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
@@ -149,8 +149,8 @@ dependencies {
 
     /*RETROFIT*/
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.13.1'
-    
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.0'
+
     /*CONVERTER */
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.tickaroo.tikxml:annotation:0.8.13'
