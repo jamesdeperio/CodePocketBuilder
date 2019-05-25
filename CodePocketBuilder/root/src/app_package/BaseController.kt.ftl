@@ -14,11 +14,11 @@ class ${controllerClass} : ${baseType}(), ${contractClass}.Event {
     @field:[Inject] internal lateinit var viewMethod: ${contractClass}.ViewMethod
     @field:[Inject] internal lateinit var subscription: CompositeDisposable
 
-    override fun initialization(savedInstanceState: Bundle?) {
+    override fun onInitialization(savedInstanceState: Bundle?) {
 
     }
 
-    override fun onLoadEvent(savedInstanceState: Bundle?) {
+    override fun onViewDidLoad(savedInstanceState: Bundle?) {
 
     }
   }

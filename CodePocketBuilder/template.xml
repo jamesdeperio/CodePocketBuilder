@@ -39,8 +39,8 @@
         type="string"
         constraints="class|nonempty"
         visibility="false"
-        suggest="Has${extractLetters(prefixName)}Contract"
-        default="HasMainContract"
+        suggest="Has${extractLetters(prefixName)}"
+        default="HasMain"
         help="The name of the contract interface to create" />
     <parameter
         id="controllerClass"
@@ -57,8 +57,8 @@
         name="View Implementation Name"
         type="string"
         constraints="class|nonempty"
-        suggest="${extractLetters(prefixName)}ViewImpl"
-        default="MainViewImpl"
+        suggest="${extractLetters(prefixName)}ComponentImpl"
+        default="MainComponentImpl"
         help="The name of the view implementation class to create" />
     <parameter
         id="viewClass"
@@ -66,7 +66,7 @@
         name="View Name"
         type="string"
         constraints="class|nonempty"
-        suggest="${extractLetters(prefixName)}View"
+        suggest="${extractLetters(prefixName)}Component"
         default="MainComponent"
         help="The name of the component class to create" />
     <parameter
